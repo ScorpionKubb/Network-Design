@@ -1,0 +1,40 @@
+#ใส่ Router0 (สีเหลืองฝั่งซ้าย),7
+en
+conf t
+interface range fa1/0-1
+ no shutdown
+ channel-group 1 mode on
+ exit
+
+#ใส่ Router1 (สีเขียวฝั่งซ้าย),7
+en
+conf t
+interface range fa1/2-3
+ no shutdown
+ channel-group 2 mode on
+ exit
+
+#ใส่ Router 2 (สีส้มฝั่งซ้าย),7
+en
+conf t
+interface range fa1/4-5
+ no shutdown
+ channel-group 3 mode on
+ exit
+
+#ใส่ Router 7,8
+en
+conf t
+interface range fa1/6-7
+ no shutdown
+ channel-group 4 mode on
+ exit
+
+#ใส่ Router3 (สีเขียวฝั่งขวา),Router 8
+en
+conf t
+interface range fa1/0-1
+ no shutdown
+ channel-group 5 mode on
+ exit
+
